@@ -1,0 +1,16 @@
+package org.ssa.ironyard;
+
+import junit.framework.Test;
+import org.junit.Assert.*;
+
+/**
+ * Unit test for simple App.
+ */
+
+public class AppTest 
+{
+    public void testApp()
+    {
+        assertTrue( true );
+    }
+}
