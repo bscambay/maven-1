@@ -10,7 +10,7 @@ public class SpringStarter {
 	static final Logger LOGGER = LogManager.getLogger(SpringStarter.class);
 	public static void main (String[] args)
 	{
-		LOGGER.warn("Will this show up?");
+		LOGGER.warn("Starting web app");
 		SpringApplication.run(SpringStarter.class, args);
 	}
 }
