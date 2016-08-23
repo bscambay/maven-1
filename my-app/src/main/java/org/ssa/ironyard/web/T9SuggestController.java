@@ -26,6 +26,6 @@ public class T9SuggestController {
     @RequestMapping("/t9suggest")
     public String getT9Suggestions(HttpServletRequest request) throws URISyntaxException {
 
-	return String.join("<br/>", t9Dict.suggest(request.getParameter("digits")));
+	return "<ol><li/>" + String.join("<li/>", t9Dict.suggest(request.getParameter("digits"))) + "</ol>";
     }
 }
