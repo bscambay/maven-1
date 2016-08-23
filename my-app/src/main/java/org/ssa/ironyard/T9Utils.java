@@ -1,4 +1,4 @@
-package org.ssa.ironyard.web;
+package org.ssa.ironyard;
 
 import java.util.HashMap;
 import java.util.LinkedList;
