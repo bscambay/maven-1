@@ -1,8 +1,8 @@
 package org.ssa.ironyard.web;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class WeatherService {
 
 	public float temperature() {
