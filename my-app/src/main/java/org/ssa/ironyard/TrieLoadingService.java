@@ -28,7 +28,7 @@ public class TrieLoadingService {
 	try (BufferedReader reader = Files.newBufferedReader(file.toPath(), Charset.defaultCharset())) {
 	    String line;
 	    while (null != (line = reader.readLine())) {
-		// LOGGER.debug(line);
+		LOGGER.trace("Word added to trie: {}", line);
 		t9Dict.addWord(line.trim());
 	    }
 	} catch (IOException iex) {

@@ -1,6 +1,7 @@
 package org.ssa.ironyard.web;
 
 import java.net.URISyntaxException;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -21,7 +22,7 @@ public class T9SuggestController {
     T9Dictionary t9Dict;
 
     public void setT9Dict(T9Dictionary t9Dict) {
-        this.t9Dict = t9Dict;
+	this.t9Dict = t9Dict;
     }
 
     Logger LOGGER = LogManager.getLogger(ServletRequestController.class);
@@ -29,8 +30,15 @@ public class T9SuggestController {
     @ResponseBody
     @RequestMapping("/t9suggest")
     public String getT9Suggestions(HttpServletRequest request) throws URISyntaxException {
-	if(!request.getParameter("digits").matches("[2-9]+"))
-		return "Invalid digits";
+	if(request.getParameter("digits")==null){
+	    LOGGER.error("No digits parameter provided");
+	    throw new UnsupportedOperationException("Missing digits parameter");
+	}
+	if (!request.getParameter("digits").matches("[2-9]+")) {
+	    LOGGER.error("Invalid request: {}", request.getParameter("digits"));
+	    throw new IllegalArgumentException("Invalid digits entered");
+	}
+	
 	return "<ol><li/>" + String.join("<li/>", this.t9Dict.suggest(request.getParameter("digits"))) + "</ol>";
     }
 }
