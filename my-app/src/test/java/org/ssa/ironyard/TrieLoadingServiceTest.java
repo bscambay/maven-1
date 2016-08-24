@@ -1,7 +1,8 @@
 package org.ssa.ironyard;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
+import java.io.File;
 import java.net.URISyntaxException;
 
 import org.junit.Before;
@@ -14,7 +15,7 @@ public class TrieLoadingServiceTest {
     FileFactory ff;
 
     @Before
-    public void initTrieLoadingService() throws URISyntaxException {
+    public void initTrieLoadingService() throws URISyntaxException {	
 	ff = new WebFileFactory("corncob_lowercase.txt");
 	tls = new TrieLoadingService(ff, t9Trie);
     }

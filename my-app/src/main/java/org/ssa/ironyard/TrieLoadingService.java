@@ -4,21 +4,22 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TrieLoadingService {
 
     static final Logger LOGGER = LogManager.getLogger(TrieLoadingService.class);
+    FileFactory ff = new WebFileFactory("corncob_lowercase.txt");
 
+    
+    
     @Autowired
     public TrieLoadingService(FileFactory ff, T9Dictionary t9Dict) throws URISyntaxException {
 	File file = ff.getInstance();

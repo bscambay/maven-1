@@ -48,11 +48,11 @@ public class T9DictionaryTests {
 
     @Test
     public void testT9WordIsEqualToT9OfWord() {
-	assertTrue(T9Utils.convertWordToT9("apple").toString(), T9Utils.convertWordToT9("apple").get(0) == 2);
-	assertTrue(T9Utils.convertWordToT9("apple").toString(), T9Utils.convertWordToT9("apple").get(1) == 7);
-	assertTrue(T9Utils.convertWordToT9("apple").toString(), T9Utils.convertWordToT9("apple").get(2) == 7);
-	assertTrue(T9Utils.convertWordToT9("apple").toString(), T9Utils.convertWordToT9("apple").get(3) == 5);
-	assertTrue(T9Utils.convertWordToT9("apple").toString(), T9Utils.convertWordToT9("apple").get(4) == 3);
+	assertTrue(T9Dictionary.convertWordToT9("apple").toString(), T9Dictionary.convertWordToT9("apple").get(0) == 2);
+	assertTrue(T9Dictionary.convertWordToT9("apple").toString(), T9Dictionary.convertWordToT9("apple").get(1) == 7);
+	assertTrue(T9Dictionary.convertWordToT9("apple").toString(), T9Dictionary.convertWordToT9("apple").get(2) == 7);
+	assertTrue(T9Dictionary.convertWordToT9("apple").toString(), T9Dictionary.convertWordToT9("apple").get(3) == 5);
+	assertTrue(T9Dictionary.convertWordToT9("apple").toString(), T9Dictionary.convertWordToT9("apple").get(4) == 3);
     }
 
     @Test
