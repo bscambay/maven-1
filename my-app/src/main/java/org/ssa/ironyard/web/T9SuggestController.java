@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.ssa.ironyard.T9Dictionary;
+import org.ssa.ironyard.WebFileFactory;
 
 @Controller
 @ComponentScan("org.ssa.ironyard")
@@ -19,6 +20,9 @@ public class T9SuggestController {
 
     @Autowired
     T9Dictionary t9Dict;
+    
+    @Autowired
+    WebFileFactory ff;
 
     public void setT9Dict(T9Dictionary t9Dict) {
 	this.t9Dict = t9Dict;
@@ -26,6 +30,10 @@ public class T9SuggestController {
 
     Logger LOGGER = LogManager.getLogger(T9SuggestController.class);
 
+    public T9SuggestController(){
+	
+    }
+    
     @ResponseBody
     @RequestMapping("/t9suggest")
     public String getT9Suggestions(HttpServletRequest request) throws URISyntaxException {

@@ -2,12 +2,13 @@ C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\FileFactory.java
 C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\Text9Trie.java
 C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\TrieLoadingService.java
 C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\T9Dictionary.java
-C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\T9Utils.java
 C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\WeatherService.java
 C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\web\T9SuggestController.java
 C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\Book.java
 C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\SpringStarter.java
 C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\Vegetable.java
 C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\web\BookController.java
+C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\web\SimpleRestController.java
 C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\App.java
 C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\web\GreetingController.java
+C:\WS\repos\maven\my-app\src\main\java\org\ssa\ironyard\WebFileFactory.java

@@ -2,7 +2,6 @@ package org.ssa.ironyard;
 
 import static org.junit.Assert.assertTrue;
 
-import java.io.File;
 import java.net.URISyntaxException;
 
 import org.junit.Before;

@@ -16,12 +16,10 @@ import org.springframework.stereotype.Component;
 public class TrieLoadingService {
 
     static final Logger LOGGER = LogManager.getLogger(TrieLoadingService.class);
-    FileFactory ff = new WebFileFactory("corncob_lowercase.txt");
-
-    
     
     @Autowired
     public TrieLoadingService(FileFactory ff, T9Dictionary t9Dict) throws URISyntaxException {
+	
 	File file = ff.getInstance();
 
 	LOGGER.debug("file {}, exists?{}", file, file.exists());
