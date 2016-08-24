@@ -25,7 +25,8 @@ public class T9SuggestController {
     @ResponseBody
     @RequestMapping("/t9suggest")
     public String getT9Suggestions(HttpServletRequest request) throws URISyntaxException {
-
+	if(!request.getParameter("digits").matches("[2-9]+"))
+		return "Invalid digits";
 	return "<ol><li/>" + String.join("<li/>", t9Dict.suggest(request.getParameter("digits"))) + "</ol>";
     }
 }

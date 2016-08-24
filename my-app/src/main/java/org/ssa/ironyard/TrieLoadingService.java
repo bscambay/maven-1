@@ -19,14 +19,11 @@ public class TrieLoadingService {
     static final Logger LOGGER = LogManager.getLogger(TrieLoadingService.class);
 
     @Autowired
-    public T9Dictionary t9Dict;
-
     public TrieLoadingService(T9Dictionary t9Dict) throws URISyntaxException {
 	URL resource = getClass().getClassLoader().getResource("corncob_lowercase.txt");
 	LOGGER.debug("{}", resource);
 	File file = new File(resource.toURI());
 
-	this.t9Dict = t9Dict;
 	LOGGER.debug("file {}, exists?{}", file, file.exists());
 	try (BufferedReader reader = Files.newBufferedReader(file.toPath(), Charset.defaultCharset())) {
 	    String line;
