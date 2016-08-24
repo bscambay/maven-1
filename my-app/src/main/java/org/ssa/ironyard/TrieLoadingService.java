@@ -11,6 +11,7 @@ import java.nio.file.Files;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -19,10 +20,8 @@ public class TrieLoadingService {
     static final Logger LOGGER = LogManager.getLogger(TrieLoadingService.class);
 
     @Autowired
-    public TrieLoadingService(T9Dictionary t9Dict) throws URISyntaxException {
-	URL resource = getClass().getClassLoader().getResource("corncob_lowercase.txt");
-	LOGGER.debug("{}", resource);
-	File file = new File(resource.toURI());
+    public TrieLoadingService(FileFactory ff, T9Dictionary t9Dict) throws URISyntaxException {
+	File file = ff.getInstance();
 
 	LOGGER.debug("file {}, exists?{}", file, file.exists());
 	try (BufferedReader reader = Files.newBufferedReader(file.toPath(), Charset.defaultCharset())) {

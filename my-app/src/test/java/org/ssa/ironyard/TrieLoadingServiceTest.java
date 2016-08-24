@@ -11,21 +11,23 @@ public class TrieLoadingServiceTest {
 
     T9Dictionary t9Trie = new T9Dictionary();
     TrieLoadingService tls;
+    FileFactory ff;
 
     @Before
     public void initTrieLoadingService() throws URISyntaxException {
-	tls = new TrieLoadingService(t9Trie);
+	ff = new WebFileFactory("corncob_lowercase.txt");
+	tls = new TrieLoadingService(ff, t9Trie);
     }
 
     @Test
     public void testT9TrieIsLoaded() throws URISyntaxException {
 	assertTrue(t9Trie.suggest("").isEmpty());
-	assertTrue(t9Trie.suggest("5").size() > 0);
+	assertTrue(t9Trie.suggest("2").size() > 0);
     }
     
     @Test(expected=NullPointerException.class)
     public void testTrieLoadingServiceNull() throws URISyntaxException{
-	new TrieLoadingService(null);
+	new TrieLoadingService(ff, null);
     }
 
 }
