@@ -20,6 +20,10 @@ public class T9SuggestController {
     @Autowired
     T9Dictionary t9Dict;
 
+    public void setT9Dict(T9Dictionary t9Dict) {
+        this.t9Dict = t9Dict;
+    }
+
     Logger LOGGER = LogManager.getLogger(ServletRequestController.class);
 
     @ResponseBody
