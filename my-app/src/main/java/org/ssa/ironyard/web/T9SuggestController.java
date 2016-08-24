@@ -25,7 +25,7 @@ public class T9SuggestController {
 	this.t9Dict = t9Dict;
     }
 
-    Logger LOGGER = LogManager.getLogger(ServletRequestController.class);
+    Logger LOGGER = LogManager.getLogger(T9SuggestController.class);
 
     @ResponseBody
     @RequestMapping("/t9suggest")

@@ -10,11 +10,11 @@
 		</File>
 	</Appenders>
 	<Loggers>
-		<Root level="warn">
+		<Root level="debug">
 			<AppenderRef ref="Console" />
 		</Root>
-		<Logger name="org.ssa.ironyard.web" level="warn">
-			<AppenderREf ref="log-file" />
+		<Logger name="org.ssa.ironyard.web" level="debug">
+			<AppenderREf ref="Console" />
 		</Logger>
 	</Loggers>
 </Configuration>

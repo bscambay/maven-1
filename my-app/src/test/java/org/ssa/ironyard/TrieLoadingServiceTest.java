@@ -22,5 +22,10 @@ public class TrieLoadingServiceTest {
 	assertTrue(t9Trie.suggest("").isEmpty());
 	assertTrue(t9Trie.suggest("5").size() > 0);
     }
+    
+    @Test(expected=NullPointerException.class)
+    public void testTrieLoadingServiceNull() throws URISyntaxException{
+	new TrieLoadingService(null);
+    }
 
 }
