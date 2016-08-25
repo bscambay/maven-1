@@ -38,7 +38,7 @@ public class ZooLoaderService {
 	zoo.addAnimal(new Animal(
 		"fish",
 		Arrays.asList("Africa", "Asia", "Antarctica", "Australia", "Europe", "North America", "South America"),
-		"Fish are friends."
+		"Fish are friends -- not food."
 		));
 	zoo.addAnimal(new Animal(
 		"gorilla",
@@ -56,9 +56,9 @@ public class ZooLoaderService {
 		"The two species of lizard within the genus Iguana possess a dewlap, a row of spines running down their backs to their tails, and a tiny \"third eye\" on their heads."
 		));
 	zoo.addAnimal(new Animal(
-		"jackal",
-		Arrays.asList("Africa", "Asia", "Europe"),
-		"Like foxes and coyotes, jackals are often depicted as clever sorcerers in the myths and legends of their regions."
+		"jackalope",
+		Arrays.asList("North America"),
+		"The jackalope can imitate the human voice, according to legend."
 		));
 	zoo.addAnimal(new Animal(
 		"kangaroo",

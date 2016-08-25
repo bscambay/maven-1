@@ -1,6 +1,5 @@
 package org.ssa.ironyard.web;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -36,7 +35,7 @@ public class ZooRestController {
 	List<AnimalLink> animalLinks = new LinkedList<>();
 	zoo.getAnimals().stream()
 		.forEach(a -> animalLinks.add(
-			new AnimalLink(a.getName(), request.getRequestURL() + a.getName())
+			new AnimalLink(a.getName(), "/zoo/animals/" + a.getName())
 			));
 	return new ResponseEntity<List<AnimalLink>>(animalLinks, HttpStatus.OK);
     }
