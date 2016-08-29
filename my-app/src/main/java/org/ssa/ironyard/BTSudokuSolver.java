@@ -16,8 +16,6 @@ public class BTSudokuSolver {
 		String solution = solve(b.toString());
 		if (solution != null)
 		    return solution;
-
-		b.setCharAt(location, '0');
 	    }
 	}
 	return null;
