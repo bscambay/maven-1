@@ -2,6 +2,7 @@ package org.ssa.ironyard.web;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -43,5 +44,12 @@ public class ZooRestController {
     @RequestMapping(path = "/animals/{animalName}", method = RequestMethod.GET)
     public ResponseEntity<Animal> getAnimal(@PathVariable String animalName, HttpServletRequest request) {
 	return new ResponseEntity<Animal>(zoo.getAnimalByName(animalName), HttpStatus.OK);
+    }
+    
+    @RequestMapping(path = "/animals/search/continents/{continent}")
+    public List<Animal> findAnimals(@PathVariable String continent){
+	return zoo.getAnimals().stream()
+		.filter(a -> a.getNativeContinents().contains(continent))
+		.collect(Collectors.toList());
     }
 }
