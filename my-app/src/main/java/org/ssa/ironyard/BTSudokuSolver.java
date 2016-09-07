@@ -19,7 +19,7 @@ public class BTSudokuSolver {
 	    }
 	}
 	return null;
-    };
+    }
 
     protected static boolean guessValid(String game, int index, char guess) {
 	return

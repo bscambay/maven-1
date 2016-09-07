@@ -18,6 +18,8 @@
             input.far-right { border-right-width: 4px; border-right-color: #111 }
             input.far-left { border-left-width: 4px; border-left-color: #111 }
             .row { font-size: 0px; margin: 0 20% }
+            input.cell:focus { background: #2e2 }
+            input.error {background: #f02}
 
             #game { width: 70%; margin: 0 auto; text-align: center; display: none }
             #level { width: 70%; margin: 0 auto; text-align: center }
@@ -159,6 +161,7 @@
             </div>
             <button id="solution">Check</button>
             <button id="reset">Start Over</button>
+            <button id="main-menu">Choose Another</button>
         </section>
         <section id='level'>
             <div id="controls">
@@ -171,6 +174,7 @@
 
 
         <script type="text/javascript">
+        
             (function()
             {
                 $('#start').click(function(ev)
@@ -181,7 +185,66 @@
                 });
                 $('#reset').click(reset);
                 $('#solution').click(check);
+                $('#main-menu').click(function(ev){
+                	location.reload(true);
+                });
+                $('#game').keydown(navigate);
             })();
+            
+            function navigate(evt){
+            	switch(evt.which){
+            	case 37: 
+            		return leftKey(evt.target)
+            	case 38: 
+            		return upKey(evt.target)
+            	case 39:
+            		return rightKey(evt.target)
+            	case 40:
+            		return downKey(evt.target)
+            	default:		
+            		return true;
+            	}
+            }
+            
+            function leftKey(cell){
+            	var pos = cell.id.slice(5) | 0;
+            	if(pos % 9 == 0)
+            		pos += 8
+            	else 
+            		pos--
+            	$('#cell-' + pos).focus();
+            	return true
+            }   
+            
+            function rightKey(cell){
+            	var pos = cell.id.slice(5) | 0;
+            	if(pos % 9 == 8)
+            		pos -= 8
+            	else 
+            		pos++
+            	$('#cell-' + pos).focus();
+            	return true
+            }            
+            function upKey(cell){
+            	var pos = cell.id.slice(5) | 0;
+            	if(pos < 9 && pos >=0)
+            		pos += 72
+            	else 
+            		pos -= 9
+            	$('#cell-' + pos).focus();
+            	return true
+            }            
+            
+            function downKey(cell){
+            	var pos = cell.id.slice(5) | 0;
+            	if(pos < 81 && pos > 71)
+            		pos -= 72
+            	else 
+            		pos += 9
+            	$('#cell-' + pos).focus();
+            	return true
+            }
+            
             function sudokuInitialize(arg)
             {
                 $('#game').data('game-id', arg['game'])

@@ -36,12 +36,6 @@ public class SudokuGame {
     public SudokuGame(){
 	
     }
-    
-    public SudokuGame(String id, String initial) {
-	this.id = id;
-	this.initial = initial;
-	this.solution = BTSudokuSolver.solve(initial);
-    }
 
     public String getSolution() {
         return solution;

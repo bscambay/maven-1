@@ -31,7 +31,7 @@ public class SudokuController {
     @Autowired
     SudokuGames games;
 
-    @RequestMapping("/{gameDifficulty}")
+    @RequestMapping("{gameDifficulty}")
     public Map<String, String> getAGame(@PathVariable String gameDifficulty) {
 	Random r = new Random();
 	Map<String, String> returnedGameMap = new HashMap<>();
