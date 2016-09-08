@@ -27,20 +27,37 @@
         </div>
     </nav>
     <div class="container-fluid bg-2 text-center">
-        <h1 contenteditable="true">Velociraptor</h1></div>
+        <label class="text"><input style="color: black; font-size:3em" type="text" value="Velociraptor"/></label>
+        </div>
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
-                <h2>Continents</h2>
-                <ul contenteditable="true">
-                    <li>Asia</li>
-                </ul>
-                <h2>Fun Fact</h2>
-                <div contenteditable="true">The fact that the ancestors of Velociraptor were feathered and possibly capable of flight had long suggested to paleontologists that Velociraptor bore feathers as well, since even flightless birds today retain most of their feathers.</div>
+                <div class="form-group">
+                    <label for="continents">
+                        <h2>Continents</h2></label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="Antarctica">Antarctica</label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="Asia" checked>Asia</label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="Australia">Australia</label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="Europe">Europe</label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="North America">North America</label>
+                    <label class="checkbox">
+                        <input type="checkbox" value="South America">South America</label>
+                </div>
+                <div class="form-group">
+                    <label for="funfact">
+                        <h2>Fun Fact</h2> </label>
+                    <textarea rows="5" class="form-control" id="funfact">The fact that the ancestors of Velociraptor were feathered and possibly capable of flight had long suggested to paleontologists that Velociraptor bore feathers as well, since even flightless birds today retain most of their feathers.</textarea>
+                </div>
             </div>
-            <div class="col-sm-4"><img id=animalImage src="Velociraptor.jpg"  class="img-responsive img-rounded" /> </div>
+                <div class="col-sm-4"><img id=animalImage src="Velociraptor.jpg" class="img-responsive img-rounded" />
+                    <label class="control-label">Select File</label>
+                    <input id="input-1" type="file" class="file"> </div>
         </div>
-    </div>
 </body>
 
 </html>
