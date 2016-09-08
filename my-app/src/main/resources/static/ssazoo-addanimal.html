@@ -26,20 +26,21 @@
             </div>
         </div>
     </nav>
-    
     <div class="container-fluid bg-2 text-center">
-        <h1>Velociraptor</h1></div>
+        <h1 contenteditable="true">{Animal name}</h1></div>
     <div class="container">
         <div class="row">
             <div class="col-sm-8">
                 <h2>Continents</h2>
-                <ul>
-                    <li>Asia</li>
-                </ul>
+                <ul contenteditable="true">
+                    <li>{Continent}</li></ul>
                 <h2>Fun Fact</h2>
-                <p> The fact that the ancestors of Velociraptor were feathered and possibly capable of flight had long suggested to paleontologists that Velociraptor bore feathers as well, since even flightless birds today retain most of their feathers.</p>
+                <div contenteditable="true">{Fun fact}</div>
             </div>
-            <div class="col-sm-4"><img id=animalImage src="Velociraptor.jpg" class="img-responsive img-rounded" /> </div>
+            <div class="col-sm-4"><img id=animalImage src=""  class="img-responsive" />
+                <label class="control-label">Select File</label>
+                <input id="input-1" type="file" class="file">
+            </div>
         </div>
     </div>
 </body>
